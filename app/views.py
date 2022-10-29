@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+
 from rest_framework.generics import GenericAPIView
 from rest_framework import status, response
 from django.http import JsonResponse
@@ -18,7 +18,7 @@ class WhoAreYouView(GenericAPIView):
         header = {
             "Access-Control-Allow-Origin":"*"
         }
-        return JsonResponse({ "slackUsername": slack_username, "backend": backend, "age": age, "bio": bio }, status=status.HTTP_200_OK, header = header)
+        return JsonResponse({ "slackUsername": slack_username, "backend": backend, "age": age, "bio": bio }, status=status.HTTP_200_OK, headers = header)
 
 
     
