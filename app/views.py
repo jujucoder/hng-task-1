@@ -18,7 +18,7 @@ class WhoAreYouView(GenericAPIView):
         header = {
             "Access-Control-Allow-Origin":"*"
         }
-        return JsonResponse({ "slackUsername": slack_username, "backend": backend, "age": age, "bio": bio }, status=status.HTTP_200_OK, headers = header)
+        return response.Response({ "slackUsername": slack_username, "backend": backend, "age": age, "bio": bio }, status=status.HTTP_200_OK, headers = header)
 
 
     
